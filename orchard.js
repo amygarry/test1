@@ -49,8 +49,21 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 
-// CODE HERE
-
+// CODE HERE]
+let totalAcres = 0
+for(let i=0; i<fujiAcres.length; i++){
+    totalAcres = totalAcres + fujiAcres[i] 
+}
+for(let i=0; i<galaAcres.length; i++){
+    totalAcres = totalAcres + galaAcres[i] 
+}
+for(let i=0; i<pinkAcres.length; i++){
+    totalAcres = totalAcres + pinkAcres[i] 
+}
+console.log(totalAcres)
+//so I ran a for loop for each of the arrays adding the number to the total acres 
+//I'm wondering if this could have been done in just one for loop. 
+//what I don't know is how you would specify the length of i in the parameters 
 
 
 
@@ -68,7 +81,8 @@ const pinkPrice = .55
 */
 
 // CODE HERE
-
+let averageDailyAcres = totalAcres/7
+console.log(averageDailyAcres)
 
 
 
@@ -106,9 +120,11 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
-
-
-
+while (acresLeft > 0 )
+{acresLeft = acresLeft- averageDailyAcres
+days = days +=1
+   }
+console.log(days)
 // PROBLEM 4
 
 /*
@@ -135,9 +151,15 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = fujiAcres.map(x => x*6.5)
+let galaTons = galaAcres.map(x=> x*6.5)
+let pinkTons = pinkAcres.map(x=> x*6.5)
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
+
+// yesterday while working on the extra problem I read about maping arrays 
+//I mapped an the acres of apples on to a new array and multiplied each element by 6.5 tons 
 
 
 
@@ -166,10 +188,23 @@ let days = 0
 // let galaPounds =
 // let pinkPounds =
 
+let fujiPounds = 0
+for(let i=0; i<fujiTons.length; i++){
+    fujiPounds = (fujiPounds+ fujiTons[i]*2000)
+}
+console.log(fujiPounds+"lb")
+let galaPounds = 0
+for(let i=0; i<galaTons.length; i++){
+    galaPounds = (galaPounds+ galaTons[i]*2000)
+}
+console.log(galaPounds+"lb")
+let pinkPounds = 0
+for(let i=0; i<pinkTons.length; i++){
+    pinkPounds = (pinkPounds+ pinkTons[i]*2000)
+}
+console.log(pinkPounds + "lb")
 
-
-
-
+//I set the new variable of pounds equal to zero then set up a for loop that went through the tons of that same apple. The for loop changed the tons to pounds and added it to the previous value of pounds summing them all up. when I logged them to the console I included lb so we knew this number was refering to pounds. 
 
 // PROBLEM 6
 
@@ -188,15 +223,13 @@ let days = 0
 */
 
 // CODE HERE
-
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
-
-
-
-
-
+let fujiProfit = fujiPounds*fujiPrice
+let galaProfit = galaPounds*galaPrice
+let pinkProfit = pinkPounds*pinkPrice
+console.log("$" + fujiProfit)
+console.log("$" + galaProfit)
+console.log("$" + pinkProfit)
+//I let the profit be equal to the number of pounds time how much we will earn per pound and then I logged them to the console. I made sure to include a dollar sign so we new what we were reffering to. 
 
 // PROBLEM 7
 
@@ -209,3 +242,6 @@ let days = 0
 */
 
 // CODE HERE
+let totalProfit= fujiProfit + galaProfit + pinkProfit
+console.log("Our total profit for the 7 days is $" + totalProfit)
+// just make a new variable and then add all of the previous profit up. 
