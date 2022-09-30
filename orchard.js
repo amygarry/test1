@@ -84,8 +84,7 @@ console.log(totalAcres)
 let averageDailyAcres = totalAcres/7
 console.log(averageDailyAcres)
 
-
-
+//just set the averageDailyAcres equal to the total and divide by 7 because we have 7 days 
 
 // PROBLEM 3
 
@@ -125,6 +124,7 @@ while (acresLeft > 0 )
 days = days +=1
    }
 console.log(days)
+//the acers left are decreasing by the average number of acers we harvest per day. and then we count up the days. when we get to 0 on the acres left then we are done harvesting everything and we know how many days it took 
 // PROBLEM 4
 
 /*
